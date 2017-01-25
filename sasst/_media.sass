@@ -21,8 +21,27 @@
 				.searchbar
 	.navbar-header
 		display: block				
-
+	.navbar-nav 
+		.open 
+			.dropdown-menu 
+				background-color: $blanco
+				color: $blanco
+				li>a
+					color: $blanco
+				li
+					color: $blanco
+					a
+						background-color: $blanco
+						color: $blanco
+					&:hover
+						background-color: $rosa
+						color: $blanco
 @media screen and (max-width: 420px)
+	.navbar-nav 
+		.open
+			background-color: $celeste
+			.dropdown-menu
+				background-color: $blanco
 	.m-header
 		.ls
 			margin: 0px auto

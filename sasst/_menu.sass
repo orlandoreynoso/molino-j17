@@ -1,8 +1,43 @@
+.e-menu
+	background-color: $rosa
+	width: 100%
+	padding: 5px
+	.row
+		padding: 0px
+		margin: 0px
 .navbar-header
 	display: none
+.navbar-default
+	background-color: $rosa
+	.navbar-toggle
+		.icon-bar
+			color: $blanco
+			background-color: $blanco
+		&:hover,
+		&:focus
+			background-color: $blanco
+			color: $rosa
+			.icon-bar
+				color: $rosa
+				background-color: $rosa
+	.navbar-brand
+		color: $blanco
+	.navbar-nav > li > a
+		background-color: $rosa
+		color: $blanco
+		&:hover
+			background-color: $blanco
+	.navbar-nav > .active > a, 
+	.navbar-nav > .active > a:focus, 
+	.navbar-nav > .active > a:hover
+		color: $grisoscuro
+		background-color: $blanco
+.navbar
+	border: none
+	padding: 0px
+	margin: 0px
 nav
 	padding: 20px
-	background-color: orange
 	width: 100%
 	#cuadro_menu
 		background-color: $rosa
