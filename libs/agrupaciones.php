@@ -1,4 +1,4 @@
-<div class="zerogrid" id="titulo_cuadro_reflexiones">
+<div class="titulo--groupings">
 	<h3>Agrupaciones</h3>
 </div>
 

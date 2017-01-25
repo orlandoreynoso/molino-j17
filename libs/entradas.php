@@ -84,9 +84,9 @@ function obtener_categoria($nombre,$id){    ?>
             <span class="date">Publicación: <?php the_time('j F, Y'); ?></span>
         </div>        
     </div>
-      <a class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      <?php the_excerpt();  
+    <a class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <?php the_excerpt();  
 }
 function obtener_pagina($nombre,$id){    ?>
     <div id="titulo_<?php echo $id; ?>">
@@ -178,5 +178,33 @@ function get_recomendaciones($pagina,$perpage, $titulo, $clase){
             </div>
         <?php endwhile;?>
     <?php  
-}        
+} 
+
+
+function create_array($page,$perpage){
+     $array = array(                
+        'post_type' => 'page',
+        'post_parent'       => ''.$page.'',
+        'posts_per_page'         => ''.$perpage.'',
+    );
+
+     return $array;
+}
+
+function get_recomendaciones_home($page,$perpage,$titulo){
+    ?>
+    <?php
+    $the_query = new WP_Query(create_array($page,$perpage));
+        $id = get_permalink($page);
+        $title = get_the_title($page );
+         while($the_query->have_posts()) : $the_query->the_post();  ?>
+        <div class="list">            
+            <a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <a class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a> 
+            <div class="label"><i class="icon-file fa fa-file"></i><a href="<?php echo $id; ?>" class="cat"><?php echo $title;  ?></a></div>
+            <div class="exe"><?php the_excerpt(); ?> </div>
+        </div>
+    <?php
+      endwhile;
+}       
 ?>

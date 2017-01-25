@@ -25,13 +25,25 @@
 	.navbar-nav > li > a
 		background-color: $rosa
 		color: $blanco
+		li
+			a
+				&:focus
+					color: $blanco
+					background-color: $rosa
 		&:hover
 			background-color: $blanco
-	.navbar-nav > .active > a, 
-	.navbar-nav > .active > a:focus, 
+			color: $rosa
+		&:focus
+			color: $blanco
+			background-color: transparent			
+	.navbar-nav > .active > a:focus,
 	.navbar-nav > .active > a:hover
-		color: $grisoscuro
+		color: $rosa
 		background-color: $blanco
+	.navbar-nav > .open > a:focus, 
+	.navbar-nav > .open > a:hover
+		background-color: $blanco
+		color: $rosa
 .navbar
 	border: none
 	padding: 0px

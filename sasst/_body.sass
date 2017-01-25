@@ -1,0 +1,210 @@
+.recomen
+	.titulo-recomendaciones
+		text-align: center
+		@include titulo_cuadro($rosa)
+		h3
+			font-size: 1.2em
+			color: $blanco
+			text-transform: uppercase
+			font-family: 'Oswald', sans-serif
+			margin: 0px
+			padding: 0px
+	.c-recomendaciones
+		padding: 10px
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		box-sizing: border-box
+		.list
+			width: 25%
+			padding: 20px
+			border-bottom: 1px solid $grismasclaro
+			.thumb
+				width: 100%
+				height: auto
+				display: block
+				img
+					max-width: 100%
+					height: auto
+					margin: 0px auto
+					text-align: center
+					vertical-align: middle
+					display: block
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)					
+			.title
+				font-family: 'Oswald', sans-serif
+				font-size: 1.4em
+				color: $verde
+				width: 100%
+				text-align: center
+				display: block
+				margin: 10px auto
+				&:hover
+					color: $celeste
+			.label
+				width: 100%
+				padding: 20px 0px
+				.icon-file
+					margin-right: 10px
+					color: $verde2
+				a
+					color: $grisoscuro
+					&:hover
+						color: $verde
+
+.groupings
+	.titulo--groupings
+		@include titulo_cuadro($celeste)
+		text-align: center
+		h3
+			font-size: 1.2em
+			color: $grisoscuro
+			text-transform: uppercase
+			font-family: 'Oswald', sans-serif
+			margin: 0px
+			padding: 0px			
+.con-general
+	background-color: $blanco
+	padding-top: 10px
+	.con
+		margin-bottom: 20px
+		.contenido
+			border-bottom: 1px solid rgba($grisoscuro, 0.4)
+			margin-bottom: 10px
+			padding-bottom: 10px
+			margin-top: 10px
+			.title
+				font-size: 1.5em
+				font-family: 'Oswald', sans-serif
+				color: $celeste
+				&:hover
+					color: $verde
+			.date-cat
+				padding: 10px
+				.fecha
+					font-family: 'Oswald', sans-serif					
+					font-size: 0.9em
+					color: $rosa
+					.icon-date
+						margin-right: 5px
+						color: $verde
+				.descripcion_categoria
+					font-family: 'Oswald', sans-serif					
+					font-size: 0.9em
+					float: right
+					text-align: right
+					color: $rosa
+					.icon-file
+						margin-right: 5px
+						color: $rosa
+					a
+						color: $celeste
+						&:hover
+							color: $verde
+			.thumb
+				padding: 5px
+			.info
+				padding: 5px 10px 10px 10px
+				line-height: 1.625em
+				font-size: 1.0625em
+				color: #302f2f
+				font-family: "Open Sans", sans-serif				
+.con-general
+	.con
+		img
+			max-width: 100%
+			height: auto
+		.alignleft
+			float: left
+			margin: 20px 20px 20px 0px
+		.alignright
+			float: right
+			margin: 20px 0px 20px 20px
+		.aligncenter
+			width: 100%
+			height: auto
+			margin: 5px auto
+		.interiores
+			line-height: 1.625em
+			font-size: 1.0625em
+			color: $textogris
+			font-family: 'Open Sans', sans-serif
+		.titulo
+			@include titulo_cuadro($verde)
+			color: $blanco
+			margin-bottom: 5px
+			.mapeo
+				a
+					color: $rosa
+					font-weight: bold
+					padding: 0px 4px 0px 4px
+					&:hover
+						color: $grisoscuro
+						font-weight: bold
+						transition: 0.5s ease
+	.side
+		.entradas
+			background-color: $grisclaro
+			.titulo_entradas
+				@include titulo_cuadro($celeste)
+				h3
+					font-size: 1.2em
+					color: $blanco
+					text-transform: uppercase
+					font-family: 'Oswald', sans-serif
+					margin: 0px
+					padding: 0px
+		.recientes
+			margin-bottom: 20px
+			padding-left: 10px
+			padding-right: 10px
+			padding-top: 10px
+			.thumb
+				width: 20%
+				img
+					height: auto
+					display: inline-block
+					float: left
+					margin-right: 7px
+					box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+					border: 2px solid #ffffff
+					width: 90%
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+			.title
+				color: #009FFF
+				line-height: 1.3em
+				font-size: 1.1em
+				text-decoration: none
+				width: 78%
+				text-transform: lowercase
+				&:hover
+					color: #d53132
+					transition: 0.5s ease
+					-o-transition: 0.5s ease
+					-webkit-transition: 0.5s ease
+				&:first-letter
+					text-transform: uppercase
+			.list
+				padding: 5px
+				margin-bottom: 5px
+				padding-bottom: 9px
+				overflow: hidden
+				border-bottom: 1px solid #009FFF
+				text-transform: lowercase
+				display: flex
+				flex-flow: row wrap
+				justify-content: space-between
+				align-items: center
+				box-sizing: border-box					

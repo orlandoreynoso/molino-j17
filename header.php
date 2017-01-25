@@ -76,7 +76,3 @@
 		</div>
 	</div>
 </div>
-
-
-<div id="contenedor">	
-	

@@ -1,38 +1,61 @@
 <?php 
 
 /*
+  Template Name: Blog
+  Template Post Type: post, page, product
+*/
 
-Template Name: HOME
-
- */
+ get_header();
 
 ?>
 
 
-<?php get_header(); ?>
+<section class="con-general">
+
+  <div class="container">
+     <div class="row">
+          <div class="col-xs-12 col-md-8 con">
+          <div class="titulo">
+            <div class="mapeo"><?php the_breadcrumb(); ?></div>
+          </div>
+            <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+
+           <div class="contenido">
+                  <a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  <div class="date-cat">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 fecha"><i class="icon-date fa fa-calendar"></i><?php the_time('j F, Y'); ?></div>
+                        <div class="col-xs-12 col-md-6 descripcion_categoria"><i class="icon-file fa fa-file"></i><a class="cat"><?php the_category (' , '); ?></a></div>
+                    </div>
+                  </div>
+                  <div class="thumb">
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>              
+                  </div>
+                  <div class="info"><?php the_excerpt();  ?></div>
+            </div>   
 
 
-<section>
-	<article class="space" id="cuadro_banner">
-		<?php include (TEMPLATEPATH . '/libs/banner.php');  ?>
-	</article>
+          <?php endwhile; ?>
+          <div class="navigation"><?php if(function_exists('pagenavi')) { pagenavi(); } ?></div>
+          <?php else : ?>
+          <p><?php _e('Ups!, no hay entradas.'); ?></p>
+          <?php endif; ?>
+       </div>
+        <div class="col-xs-12 col-md-4 side">
+          <div class="entradas">
+            <div class="titulo_entradas">
+              <h3>Entradas recientes</h3>
+            </div>
 
-	<article class="space" id="cuadro_iglesia">
-		<?php include (TEMPLATEPATH . '/libs/infoparroquial.php');  ?>
-	</article>		
-
-	<div class="zerogrid" id="home">
-			<?php include (TEMPLATEPATH.'/libs/ultimasnoticias.php');  ?>		
-	</div>
-
-	<article class="space" id="cuadro_reflexiones">	
-		<?php include (TEMPLATEPATH.'/libs/recomendaciones.php');  ?>
-	</article>	
-
-	<article class="space" id="cuadro_reflexiones">
-		<?php include (TEMPLATEPATH.'/libs/agrupaciones.php');  ?>
-	</article>
-
+            <div class="recientes">
+              <?php get_sidebar(); ?>
+            </div>  
+          </div>        
+        </div>      
+    </div>
+  </div>
+  
 </section>
 
-<?php get_footer(); ?>
+<?php get_footer();  ?>

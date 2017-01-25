@@ -19,29 +19,22 @@
 				.icon
 			.search
 				.searchbar
-	.navbar-header
-		display: block				
-	.navbar-nav 
-		.open 
-			.dropdown-menu 
-				background-color: $blanco
-				color: $blanco
-				li>a
-					color: $blanco
-				li
-					color: $blanco
-					a
-						background-color: $blanco
-						color: $blanco
-					&:hover
-						background-color: $rosa
-						color: $blanco
-@media screen and (max-width: 420px)
 	.navbar-nav 
 		.open
-			background-color: $celeste
-			.dropdown-menu
-				background-color: $blanco
+			background-color: $blanco
+			color: $rosa				
+@media screen and (max-width: 420px)
+	.dropdown-menu > li > a
+		&:hover
+			background-color: $blanco
+			color: $rosa
+	.dropdown-menu
+		background-color: $blanco
+		color: $rosa
+	.navbar-nav 
+		.open
+			background-color: $blanco
+			color: $rosa
 	.m-header
 		.ls
 			margin: 0px auto
