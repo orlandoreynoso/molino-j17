@@ -1,7 +1,7 @@
-<div class="zerogrid" id="titulo_iglesia">
-	<!-- h3>Selecciona tu iglesia</h3 -->
+<div class="titulo-iglesia">
+	<h3>Anuncios parroquiales</h3>
 </div>
-<div class="zerogrid" id="iglesia">
+<div class="c-info" id="iglesia">
 	<div id="div1">
 		<a href="<?php bloginfo('url'); ?>/horarios-de-misa">
 			<img src="<?php echo IMAGES.'/jesus.jpg'; ?>" alt="">

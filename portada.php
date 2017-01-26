@@ -11,17 +11,20 @@ Template Name: Portada
 
 <?php get_header(); ?>
 
-<section>
-	<article class="space" id="cuadro_banner">
-		<?php include (TEMPLATEPATH . '/libs/banner.php');  ?>
-	</article>
-</section>
 
-<section>
+<div class="slide">
+    <div class="row">
+      <div class="col-md-12">
+        <?php include (TEMPLATEPATH . '/libs/banner.php');   ?> 
+      </div>
+    </div>
+</div>
+
+<section class="info-parroquial">
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<article class="space" id="cuadro_iglesia">
+			<article>
 				<?php include (TEMPLATEPATH . '/libs/infoparroquial.php');  ?>
 			</article>					
 		</div>
