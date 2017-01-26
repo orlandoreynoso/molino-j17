@@ -1,5 +1,4 @@
 <?php 
-
 function ultimas_entradas(){
     $args=array(
     'post_type' => 'post',
@@ -159,7 +158,6 @@ switch ($numero) {
         break;
 }
 }
-
 function get_agrupaciones($pagina, $perpage){
     $args = array(                
         'post_type' => 'page',
@@ -179,19 +177,15 @@ function get_recomendaciones($pagina,$perpage, $titulo, $clase){
         <?php endwhile;?>
     <?php  
 } 
-
-
 function create_array($page,$perpage){
      $array = array(                
         'post_type' => 'page',
         'post_parent'       => ''.$page.'',
         'posts_per_page'         => ''.$perpage.'',
     );
-
      return $array;
 }
-
-function get_recomendaciones_home($page,$perpage,$titulo){
+function get_recomendaciones_home($page,$perpage){
     ?>
     <?php
     $the_query = new WP_Query(create_array($page,$perpage));
