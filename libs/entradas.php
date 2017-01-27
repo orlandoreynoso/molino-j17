@@ -200,7 +200,7 @@ function create_array($page,$perpage){
      return $array;
 }
 
-function get_recomendaciones_home($page,$perpage){
+function get_recomendaciones_home($page,$perpage,$nombre){
     ?>
     <?php
     $the_query = new WP_Query(create_array($page,$perpage));

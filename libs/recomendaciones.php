@@ -13,10 +13,10 @@
 get_recomendaciones_name('atrio');
 
 /*
-get_recomendaciones_home(1385,1);
-get_recomendaciones_home(1294,1);
-get_recomendaciones_home(1254,1);
-get_recomendaciones_home(692,1);
-get_recomendaciones_home(737,1); */
+get_recomendaciones_home(1385,1,'Año de la misericordia');
+get_recomendaciones_home(1294,1,'Reflexiones Sacerdotales');
+get_recomendaciones_home(1254,1,'Conozca Guatemala');
+get_recomendaciones_home(692,1,'Presentaciones');
+get_recomendaciones_home(737,1,'El atrio'); */
 ?>	
 </div>
