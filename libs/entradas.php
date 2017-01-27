@@ -1,4 +1,18 @@
 <?php 
+
+/**
+*  $long es una variable para indicar de cuantos caracteres de
+*   longitud queremos nuestro extracto
+*/
+function excerpt($num) {
+$limit = $num+1;
+$excerpt = explode(' ', get_the_excerpt(), $limit);
+array_pop($excerpt);
+$excerpt = implode(" ",$excerpt)."";
+echo $excerpt;
+}
+$more_strings = array('Leer mas…','Sigue leyendo…', '¡Espera! Hay mas…', 'Leer el resto del artículo…');
+
 function ultimas_entradas(){
     $args=array(
     'post_type' => 'post',
@@ -185,6 +199,7 @@ function create_array($page,$perpage){
     );
      return $array;
 }
+
 function get_recomendaciones_home($page,$perpage){
     ?>
     <?php
@@ -194,11 +209,38 @@ function get_recomendaciones_home($page,$perpage){
          while($the_query->have_posts()) : $the_query->the_post();  ?>
         <div class="list">            
             <a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <a class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a> 
+            <a class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a> 
             <div class="label"><i class="icon-file fa fa-file"></i><a href="<?php echo $id; ?>" class="cat"><?php echo $title;  ?></a></div>
             <div class="exe"><?php the_excerpt(); ?> </div>
         </div>
     <?php
       endwhile;
-}       
+} 
+
+function create_pagename($pagename){
+    $array = array( 
+        'pagename' => ''.$pagename.''
+        );
+    return $array;
+}
+
+
+
+function get_recomendaciones_name($pagename){
+    ?>
+    <?php
+    $the_query = new WP_Query(create_pagename($pagename));
+        $id = get_permalink($page);
+        $title = get_the_title($page );
+         while($the_query->have_posts()) : $the_query->the_post();  ?>
+        <div class="list">            
+            <a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <a class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a> 
+            <div class="label"><i class="icon-file fa fa-file"></i><a href="<?php the_permalink(); ?>" class="cat"><?php the_title();  ?></a></div>
+            <div class="exe"><?php the_excerpt(); ?> </div>
+        </div>
+    <?php
+      endwhile;
+} 
+
 ?>
